@@ -1,0 +1,268 @@
+.header {
+    background: #ffffff;
+
+    &__conteiner {
+        min-width: 370px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 23px;
+        padding-bottom: 23px;
+        position: relative;
+
+    }
+
+    &__logo {
+        @media(max-width: 1024px) {
+            width: 113px;
+            height: 36px;
+        }
+
+        @media(max-width: 768px) {
+            width: 63px;
+            height: 20px;
+        }
+    }
+
+    // &__nav {
+    //     display: flex;
+    //     justify-content: space-between;
+    //     align-items: center;
+
+    //     @media(max-width: 1024px) {
+    //         gap: 50px;
+    //     }
+
+    //     @media(max-width: 768px) {
+    //         gap: 20px;
+    //     }
+    // }
+
+    &__nav-label {
+        display: none;
+
+        @media(max-width: 768px) {
+            display: block;
+            width: 33px;
+            height: 34px;
+            background: url(./img/header/ham-menu.svg);
+            order: 3;
+        }
+    }
+
+    &__nav-list {
+        display: flex;
+        gap: 32px;
+
+        @media(max-width: 1024px) {
+            gap: 24px;
+        }
+
+        @media(max-width: 768px) {
+            display: none;
+        }
+    }
+
+
+    &__nav-link {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
+        color: #4A4A4A;
+
+        &:hover {
+            color: #333333;
+        }
+
+        &:active {
+            color: #E97522;
+        }
+    }
+
+    &__nav-input {
+        display: none;
+
+        &:checked~.header__nav-list {
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            gap: 16px;
+            align-items: end;
+            position: absolute;
+            background-color: #645e5ebd;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            z-index: 99;
+            font-size: 14px;
+            line-height: 20px;
+            color: #FFFFFF;
+        }
+    }
+
+    &__nav-backcall {
+        @media(max-width: 1024px) {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        @media(max-width: 768px) {
+            display: flex;
+            flex-direction: row;
+            gap: 16px;
+            align-items: center;
+        }
+
+        @media(min-width: 1024px) {
+            padding-left: 235px;
+        }
+    }
+
+    &__nav-button {
+        height: 31px;
+        border: 2px solid #E97522;
+        background: transparent;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 15px;
+        letter-spacing: 1px;
+        color: #E97522;
+        padding: 8px 24px;
+
+        &:hover {
+            background: #E97522;
+            color: #ffffff;
+        }
+
+        @media(max-width: 1024px) {
+            font-size: 11px;
+            line-height: 14px;
+            padding: 8px 12px;
+
+            &:active {
+                background: #E97522;
+                color: #ffffff;
+            }
+        }
+
+        @media(max-width: 768px) {
+            display: none;
+        }
+
+        @media(min-width: 1024px) {
+            position: absolute;
+            top: 26px;
+            right: 147px;
+
+            &:active {
+                height: 28px;
+                font-size: 10px;
+                line-height: 12px;
+            }
+        }
+    }
+
+    &__nav-tel {
+        @media(max-width: 1024px) {
+            order: -1;
+        }
+
+        @media(max-width: 768px) {
+            display: block;
+            position: static;
+            order: 1;
+        }
+    }
+
+    &__nav-tel-mob {
+        display: none;
+
+        @media(max-width: 768px) {
+            display: block;
+            width: 26px;
+            height: 26px;
+            background: url(./img/header/call-header.svg);
+            order: 2;
+        }
+    }
+}
+
+// ------------------HEADER-END-----------------------
+
+// -------------MAIN----------------------------------
+
+// -------------------TOP--------------
+.top {
+    &__container {
+        background: #444444;
+        position: relative;
+    }
+
+    &__label-img {
+        width: 180px;
+        height: 180px;
+        background: url(./img/header/play.png) no-repeat;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-34%, -50%);
+        cursor: pointer;
+    }
+
+    &__input{
+        display: none;
+    }
+
+    &__video{
+        display: none;
+        width: 100%;
+        height: 100%;
+        position: absolute;        
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 99;
+    }
+
+    .visible{
+        display: block;
+    }
+
+    &__close{        
+        font-size: 50px;
+        position: absolute;
+        top: 8px;
+        right: 50%;        
+        color: #000;
+        z-index: 100;
+        cursor: pointer;
+    }     
+
+    &__content {
+        max-width: 800px;
+        padding: 149px 0 141px;
+    }
+
+    &__title {
+        margin-bottom: 52px;
+    }
+
+    &__content-title{
+        color: #ffffff44;
+        max-width: 600px;
+    }
+
+    &__content-text {
+        margin: 24px 0 32px;
+        color: #FFFFFF;
+    }
+
+    &__button {
+        max-width: 380px;
+        padding: 22px 28px;
+    }
+}
+
+//------------------TOP-END-------------
